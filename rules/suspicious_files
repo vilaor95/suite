@@ -1,0 +1,20 @@
+### Conjunto de reglas para listar los archivos de directorios que puedan ser sospechosos
+
+### Archivos que contiene la Papelera de Reciclaje
+file_search,1,Recycle\.Bin\/.*,1
+file_search,1,Recycler\/.*,1
+
+### Directorios de cuarentena de programas antivirus
+# Windows defender
+file_search,3,Microsoft\/Microsoft Antimalware\/Quarantine\/.*,1
+file_search,3,Microsoft\/Windows Defender\/Quarantine\/.*,1
+
+# Symantec antivirus
+file_search,3,Symantec\/Symantec Endpoint Protection\/.*\.vbn,1
+
+# Kaspersky antivirus
+file_search,3,Kaspersky Lab\AVP.*\/QB\/.*,1
+
+# Avast antivirus
+file_search,3,Awil Software\/Avast.*\/Chest\/.*,1
+

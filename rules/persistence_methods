@@ -1,0 +1,43 @@
+# Metodos de persistencia utilizados por los atacantes
+
+# Windows Alternate Shell
+value_search,4,ControlSet001\Control\SafeBoot,AlternateShell,^((?!cmd\.exe)),1
+value_search,4,ControlSet001\Control\SafeBoot\Option,UseAlternateShell,.*,1
+
+# AppInitDLLs
+value_search,Microsoft\Windows NT\CurrentVersion\Windows,AppInit_DLLs,.*,1
+value_search,Wow6432Node\Microsoft\Windows NT\CurrentVersion\Windows,AppInit_DLLs,.*,1
+value_search,Software\Microsoft\Windows NT\CurrentVersion\Windows,AppInit_DLLs,.*,1
+value_search,Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Windows,AppInit_DLLs,.*,1
+
+# AEDebugging
+value_search,3,Microsoft\Windows NT\CurrentVersion\AeDebug,Debugger,.*,1
+
+# Command Processor Autorun
+value_search,3,Microsoft\Command Processor,AutoRun,.*,1
+value_search,3,Wow6432Node\Microsoft\Command Processor,AutoRun,.*,1
+value_search,3,Software\Microsoft\Command Processor,AutoRun,.*,1
+value_search,3,Software\Wow6432Node\Microsoft\Command Processor,AutoRun,.*,1
+
+# Windows Loggon/Logoff Scripts
+value_search,3,Software\Policies\Microsoft\Windows\System\Scripts,Logon,.*,1
+value_search,3,Policies\Microsoft\Windows\System\Scripts,Logon,.*,1
+value_search,3,Software\Policies\Microsoft\Windows\System\Scripts,Logoff,.*,1
+value_search,3,Policies\Microsoft\Windows\System\Scripts,Logoff,.*,1
+
+# Windows Run keys
+value_search,3,Microsoft\Windows\CurrentVersion\Policies\Explorer,.*,.*,1
+value_search,3,Microsoft\Windows\CurrentVersion\Run,.*,.*,1
+value_search,3,Microsoft\Windows\CurrentVersion\RunOnce,.*,.*,1
+value_search,3,Microsoft\Windows\CurrentVersion\Run,.*,.*,1
+value_search,3,Software\Microsoft\Windows\CurrentVersion\Run,.*,.*,1
+value_search,3,Software\Microsoft\Windows\CurrentVersion\RunOnce,.*,.*,1
+vvalue_search,3,Software\Microsoft\Windows\CurrentVersion\Run,.*,.*,1
+
+# Windows Run Services
+value_search,3,Microsoft\Windows\CurrentVersion\RunServices,.*,.*,1
+value_search,3,Microsoft\Windows\CurrentVersion\RunServicesOnce,.*,.*,1
+
+# Windows Scheduled Tasks
+file_search,3,Windows\/System32\/Tasks\/.*,1
+file_search,3,Windows\/SysWow64\/Tasks\/.*,1

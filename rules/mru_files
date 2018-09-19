@@ -1,0 +1,16 @@
+# MRU (Most Recent Used) Files, son los archivos mas recientes empleados por una aplicacion.
+
+# Windows Explorer
+value_search,1,Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\LastvisitedMRU,.*,.*,1
+value_search,1,Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSaveMRU,.*,.*,1
+value_search,1,Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs,.*,.*,1
+value_search,1,Software\Microsoft\Direct3D\MostRecentApplication,.*,.*,1
+
+# Microsoft Office Version 16.0 ( Cambiar segun la version que se utilice)
+value_search,1,Software\Microsoft\Office\16.0\Word\File MRU,Item.*,.*,1
+value_search,1,Software\Microsoft\Office\16.0\Excel\File MRU,Item.*,.*,1
+value_search,1,Software\Microsoft\Office\16.0\PowerPoint\File MRU,Item.*,.*,1
+value_search,1,Software\Microsoft\Office\16.0\Access\File MRU,Item.*,.*,1
+
+# Adobe Reader (version 5.0)
+value_search,1,Software\Adobe\Acrobat Reader\5.0\AVGeneral\cRecentFiles,.*,.*,1

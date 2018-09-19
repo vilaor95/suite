@@ -1,0 +1,4 @@
+# Reglas para mostrar los paths de todos los ejecutables del sistema
+
+subkey_search,1,Microsoft\Windows\CurrentVersion\App Paths,.*,.*,1
+subkey_search,1,Wow6432Node\Microsoft\Windows\CurrentVersion\App Paths,.*,.*,1

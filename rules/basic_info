@@ -1,0 +1,21 @@
+# Archivo de reglas para extraer informacion basica del equipo bajo analisis
+
+# Version de Windows e instalacion del sistema
+value_search,1,Microsoft\Windows NT\CurrentVersion,ProductName,.*,1
+value_search,1,Microsoft\Windows NT\CurrentVersion,CSDVersion,.*,1
+value_search,1,Microsoft\Windows NT\CurrentVersion,BuildName,.*,1
+value_search,1,Microsoft\Windows NT\CurrentVersion,BuildNameEx,.*,1
+value_search,1,Microsoft\Windows NT\CurrentVersion,InstallDate,.*,1
+
+# Nombre del equipo
+value_search,1,ControlSet001\Control\ComputerName\ComputerName,ComputerName,.*,1
+
+# Parámetros de la configuración de red y dominio
+value_search,1,ControlSet001\services\Tcpip\Parameters,Hostname,.*,1
+value_search,1,ControlSet001\services\Tcpip\Parameters,Domain,.*,1
+value_search,1,ControlSet001\services\Tcpip\Parameters,NameServer,.*,1
+value_search,1,ControlSet001\services\Tcpip\Parameters,DhcpNameServer,.*,1
+subkey_search,1,ControlSet001\services\Tcpip\Parameters,.*,.*,1
+
+# Usuarios existentes en el sistema
+subkey_search,1,Microsoft\Windows NT\CurrentVersion\ProfileList,ProfileImagePath,.*,1
